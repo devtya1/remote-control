@@ -31,10 +31,10 @@
 firebase.initializeApp(firebaseConfig);
 
 function change_red(){
+    document.getElementById("red").style.display = "none";
     firebase.database().ref("/").child("switch").update({
             switch : "true"
       });
-      document.getElementById("red").style.display = "none";
 }
 </script>
 </html>
