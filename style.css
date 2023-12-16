@@ -1,0 +1,25 @@
+button{
+    width: 70px;
+    height: 25px;
+    background-color: rgb(192, 205, 50);
+}
+
+a{
+    color: black;
+    font-weight: 900;
+}
+
+.container{
+    margin-left: 100px;
+    margin-top: 250px;
+}
+
+#body{
+    background-color: turquoise;
+}
+
+span{
+    font-weight: 900;
+    height: 100px;
+    width: 400px;
+}

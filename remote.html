@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+    <title>control</title>
+</head>
+<body>
+    <center>
+        <div style="margin-top: 250px;" class="container">
+            <button id="red" onclick="change_red();" class="btn btn-danger">Red</button>
+        </div>
+    </center>
+</body>
+<script>
+    var firebaseConfig = {
+        apiKey: "AIzaSyCfIyfq6IDCvgKoZtg2d7B-4-iFBMbxc-s",
+        authDomain: "test-database-for-all.firebaseapp.com",
+        databaseURL: "https://test-database-for-all-default-rtdb.firebaseio.com",
+        projectId: "test-database-for-all",
+        storageBucket: "test-database-for-all.appspot.com",
+        messagingSenderId: "24401273232",
+        appId: "1:24401273232:web:06ff1f75311448641f1315"
+};
+firebase.initializeApp(firebaseConfig);
+
+function change_red(){
+    firebase.database().ref("/").child("switch").update({
+            switch : "true"
+      });
+      document.getElementById("red").style.display = "block";
+}
+</script>
+</html>
